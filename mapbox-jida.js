@@ -216,29 +216,6 @@ map.on("load", function () {
         type: "Polygon",
         coordinates: [
           [
-            [-94.39590454101562, 37.0611019229037],
-            [-94.39611911773682, 37.056101819433],
-            [-94.3911623954773, 37.05599907412592],
-            [-94.39056158065794, 37.0540811361903],
-            [-94.38809394836426, 37.05404688685806],
-            [-94.38798666000366, 37.05656417159325],
-            [-94.38730001449585, 37.05656417159325],
-            [-94.38708543777466, 37.06096493815779],
-            [-94.39590454101562, 37.0611019229037],
-          ],
-        ],
-      },
-    },
-  });
-
-  map.addSource("property10", {
-    type: "geojson",
-    data: {
-      type: "Feature",
-      geometry: {
-        type: "Polygon",
-        coordinates: [
-          [
             [-94.39979910850525, 37.054252382619715],
             [-94.3971276283264, 37.05420100873147],
             [-94.39677357673645, 37.05434656799118],
@@ -450,29 +427,6 @@ map.on("load", function () {
       "line-width": 2,
     },
   });
-
-  map.addLayer({
-    id: "property10",
-    type: "fill",
-    source: "property10", // reference the data source
-    layout: {},
-    paint: {
-      "fill-color": "#FFFF00", // blue color fill
-      "fill-opacity": 0.5,
-    },
-  });
-
-  map.addLayer({
-    id: "outline10",
-    type: "line",
-    source: "property10",
-    layout: {},
-    paint: {
-      "line-color": "#fff",
-      "line-width": 2,
-    },
-  });
-});
 
 var chapters = {
   20501500000018000: {
