@@ -4,7 +4,6 @@ mapboxgl.accessToken =
 var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/mapbox/satellite-streets-v11",
-  //style: 'mapbox://styles/mapbox/light-v10',
   center: [-94.408537, 37.061272],
   zoom: 10.5,
   pitch: 45,
@@ -32,7 +31,6 @@ map.on("load", function () {
       type: "Feature",
       geometry: {
         type: "Polygon",
-        // These coordinates outline Maine.
         coordinates: [
           [
             [-94.41299557685852, 37.065151422716326],
@@ -56,7 +54,6 @@ map.on("load", function () {
       type: "Feature",
       geometry: {
         type: "Polygon",
-        // These coordinates outline Maine.
         coordinates: [
           [
             [-94.42281246185303, 37.06173547413623],
@@ -81,7 +78,6 @@ map.on("load", function () {
       type: "Feature",
       geometry: {
         type: "Polygon",
-        // These coordinates outline Maine.
         coordinates: [
           [
             [-94.41440105438232, 37.061607052016626],
@@ -103,7 +99,6 @@ map.on("load", function () {
       type: "Feature",
       geometry: {
         type: "Polygon",
-        // These coordinates outline Maine.
         coordinates: [
           [
             [-94.3986028432846, 37.065827745169585],
@@ -127,7 +122,6 @@ map.on("load", function () {
       type: "Feature",
       geometry: {
         type: "Polygon",
-        // These coordinates outline Maine.
         coordinates: [
           [
             [-94.40451979637145, 37.067180371985415],
@@ -155,7 +149,6 @@ map.on("load", function () {
       type: "Feature",
       geometry: {
         type: "Polygon",
-        // These coordinates outline Maine.
         coordinates: [
           [
             [-94.39270734786987, 37.0611019229037],
@@ -193,6 +186,29 @@ map.on("load", function () {
   });
 
   map.addSource("property8", {
+    type: "geojson",
+    data: {
+      type: "Feature",
+      geometry: {
+        type: "Polygon",
+        coordinates: [
+          [
+            [-94.39590454101562, 37.0611019229037],
+            [-94.39611911773682, 37.056101819433],
+            [-94.3911623954773, 37.05599907412592],
+            [-94.39056158065794, 37.0540811361903],
+            [-94.38809394836426, 37.05404688685806],
+            [-94.38798666000366, 37.05656417159325],
+            [-94.38730001449585, 37.05656417159325],
+            [-94.38708543777466, 37.06096493815779],
+            [-94.39590454101562, 37.0611019229037],
+          ],
+        ],
+      },
+    },
+  });
+
+  map.addSource("property9", {
     type: "geojson",
     data: {
       type: "Feature",
@@ -477,7 +493,7 @@ window.onscroll = function () {
 
 var activeChapterName = "20501500000018000";
 function setActiveChapter(chapterName) {
-  if (chapterName === activeChapterName) return;
+  // if (chapterName === activeChapterName) return;
 
   map.flyTo(chapters[chapterName]);
 
