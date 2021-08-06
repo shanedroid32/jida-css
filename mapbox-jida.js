@@ -192,6 +192,29 @@ map.on("load", function () {
     },
   });
 
+  map.addSource("property8", {
+    type: "geojson",
+    data: {
+      type: "Feature",
+      geometry: {
+        type: "Polygon",
+        coordinates: [
+          [
+            [-94.39590454101562, 37.0611019229037],
+            [-94.39611911773682, 37.056101819433],
+            [-94.3911623954773, 37.05599907412592],
+            [-94.39056158065794, 37.0540811361903],
+            [-94.38809394836426, 37.05404688685806],
+            [-94.38798666000366, 37.05656417159325],
+            [-94.38730001449585, 37.05656417159325],
+            [-94.38708543777466, 37.06096493815779],
+            [-94.39590454101562, 37.0611019229037],
+          ],
+        ],
+      },
+    },
+  });
+
   map.addLayer({
     id: "property1",
     type: "fill",
@@ -339,6 +362,28 @@ map.on("load", function () {
     id: "outline7",
     type: "line",
     source: "property7",
+    layout: {},
+    paint: {
+      "line-color": "#fff",
+      "line-width": 2,
+    },
+  });
+
+  map.addLayer({
+    id: "property8",
+    type: "fill",
+    source: "property8", // reference the data source
+    layout: {},
+    paint: {
+      "fill-color": "#FFFF00", // blue color fill
+      "fill-opacity": 0.5,
+    },
+  });
+
+  map.addLayer({
+    id: "outline8",
+    type: "line",
+    source: "property8",
     layout: {},
     paint: {
       "line-color": "#fff",
