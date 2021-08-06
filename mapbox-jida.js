@@ -410,6 +410,7 @@ map.on("load", function () {
 
 var chapters = {
   20501500000018000: {
+    duration: 5000,
     bearing: -17.6,
     center: [-94.4123795520438, 37.0636297780706],
     zoom: 15.5,
@@ -460,7 +461,7 @@ var chapters = {
     bearing: 90,
     duration: 5000,
     center: [-94.3913765107584, 37.0583299798448],
-    zoom: 12.3,
+    zoom: 15.3,
     pitch: 20,
   },
   "20601400000009007": {
