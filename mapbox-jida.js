@@ -177,7 +177,6 @@ map.on("load", function () {
       type: "Feature",
       geometry: {
         type: "Polygon",
-        // These coordinates outline Maine.
         coordinates: [
           [
             [-94.40457344055176, 37.06712900685072],
