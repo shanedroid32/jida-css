@@ -133,7 +133,7 @@ map.on("load", function () {
   });
 
   map.addLayer({
-    id: "outline",
+    id: "outline1",
     type: "line",
     source: "property1",
     layout: {},
@@ -155,7 +155,7 @@ map.on("load", function () {
   });
 
   map.addLayer({
-    id: "outline",
+    id: "outline2",
     type: "line",
     source: "property2",
     layout: {},
@@ -177,7 +177,7 @@ map.on("load", function () {
   });
 
   map.addLayer({
-    id: "outline",
+    id: "outline3",
     type: "line",
     source: "property3",
     layout: {},
@@ -199,7 +199,7 @@ map.on("load", function () {
   });
 
   map.addLayer({
-    id: "outline",
+    id: "outline4",
     type: "line",
     source: "property4",
     layout: {},
