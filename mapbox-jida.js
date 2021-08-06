@@ -149,6 +149,28 @@ map.on("load", function () {
     },
   });
 
+  map.addSource("property6", {
+    type: "geojson",
+    data: {
+      type: "Feature",
+      geometry: {
+        type: "Polygon",
+        // These coordinates outline Maine.
+        coordinates: [
+          [
+            [-94.39270734786987, 37.0611019229037],
+            [-94.38695669174193, 37.06094781504715],
+            [-94.3869137763977, 37.06276284326689],
+            [-94.39193487167358, 37.0628998247664],
+            [-94.39204216003418, 37.061495752670474],
+            [-94.39268589019775, 37.06130739955882],
+            [-94.39270734786987, 37.0611019229037],
+          ],
+        ],
+      },
+    },
+  });
+
   map.addLayer({
     id: "property1",
     type: "fill",
@@ -252,6 +274,28 @@ map.on("load", function () {
     id: "outline5",
     type: "line",
     source: "property5",
+    layout: {},
+    paint: {
+      "line-color": "#fff",
+      "line-width": 2,
+    },
+  });
+
+  map.addLayer({
+    id: "property6",
+    type: "fill",
+    source: "property6", // reference the data source
+    layout: {},
+    paint: {
+      "fill-color": "#FFFF00", // blue color fill
+      "fill-opacity": 0.5,
+    },
+  });
+
+  map.addLayer({
+    id: "outline6",
+    type: "line",
+    source: "property6",
     layout: {},
     paint: {
       "line-color": "#fff",
