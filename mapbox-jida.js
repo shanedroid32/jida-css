@@ -544,7 +544,7 @@ var chapters = {
     bearing: 90,
     duration: 5000,
     center: [-94.3996359999526, 37.0592998266729],
-    zoom: 17.3,
+    zoom: 15.3,
     pitch: 20,
   },
 };
